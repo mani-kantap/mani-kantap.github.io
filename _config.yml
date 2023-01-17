@@ -78,7 +78,7 @@ theme_mode:    [light|dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn: ./1608956773875.jpeg
+img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
 avatar: https://pbs.twimg.com/profile_images/1615144461947781125/Ick1IviU_400x400.jpg
