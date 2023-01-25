@@ -27,7 +27,9 @@ Record Object: Customer
 
 Topic: my_kafka_topic
 
+```
 Schema (subject name) : <topic name>-value, my_kafka_topic-value
+```
 
 This strategy enforces to follow only one schema per topic. As the subject name is derived from topic, if we are publishing the same event to different topics then it’ll have different schemas.
 
@@ -62,5 +64,4 @@ As this subject name is derived from the topic and record name when a record is 
 https://docs.confluent.io/platform/current/schema-registry/serdes-develop/index.html#schema-format-extensibility
 
 https://www.confluent.io/blog/multiple-event-types-in-the-same-kafka-topic/
-
 
