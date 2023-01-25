@@ -2,13 +2,10 @@
 title: Schema naming strategies in Confluent Schema Registry
 author: manikanta
 date: 2021-12-19 14:10:00 +0800
-categories: [Resume, Info]
+categories: [Kafka, DistributedSystems]
 tags: [writing]
 render_with_liquid: false
 ---
-Orginally Published @ https://maniii.medium.com/schema-naming-strategies-in-confluent-schema-registry-cb358a3aecb9
-
-
 Kafka is a distributed streaming platform. Irrespective of the data type it is streaming; it just streams bytes. Due to this, it becomes a tedious task to manage the data contract between producer and consumer. Schema registry helps in maintaining the data structure contract.
 
 A schema defines the structure of the data format. Confluent schema registry provides a RESTful API for managing schemas. It supports schema serialization in AVRO, JSON, and Protocol Buffers. It stores the schema under a scope which is called a Subject. The name of the subject depends on the configured subject name strategy; the default strategy is TopicNameStrategy.
@@ -60,6 +57,8 @@ Schema (subject name) : <topic name>-<fully-qualified record name >, my_kafka_to
 As this subject name is derived from the topic and record name when a record is published it gets a different subject for every topic. Similar to record name strategy, a single topic can contain multiple schema records.
 
 ### References:
+
+Orginally Published @ https://maniii.medium.com/schema-naming-strategies-in-confluent-schema-registry-cb358a3aecb9
 
 https://docs.confluent.io/platform/current/schema-registry/serdes-develop/index.html#schema-format-extensibility
 
