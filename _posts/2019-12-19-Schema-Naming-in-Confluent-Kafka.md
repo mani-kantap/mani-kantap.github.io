@@ -19,7 +19,7 @@ Schema can be accessed at
 ```
 As of now, Kafka supports TopicNameStrategy, RecordNameStrategy and TopicRecordName strategy.
 
-TopicNameStrategy :
+### TopicNameStrategy :
 
 This is the default subject naming strategy and it uses the topic name to determine the subject to be used for schema lookups.
 
@@ -31,7 +31,7 @@ Schema (subject name) : <topic name>-value, my_kafka_topic-value
 
 This strategy enforces to follow only one schema per topic. As the subject name is derived from topic, if we are publishing the same event to different topics then it’ll have different schemas.
 
-RecordNameStrategy:
+### RecordNameStrategy:
 
 It names subjects independent of the topic, the name would be a fully qualified record name.
 
@@ -44,7 +44,7 @@ Schema (subject name) : <fully-qualified record name >, com.example.customer
 
 As this subject name is derived from the record name, even though it is published to multiple topics schema registry would get only one subject. As the schema is not binded to the topic, a single topic can contain multiple schema messages.
 
-TopicRecordNameStrategy:
+### TopicRecordNameStrategy:
 
 It derives the subject name based on the topic and record name.
 
